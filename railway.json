@@ -1,8 +1,9 @@
 {
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "NIXPACKS",
+    "buildCommand": "cd backend && mvn clean package -DskipTests"
   },
   "deploy": {
-    "startCommand": "cd backend && mvn clean package -DskipTests && java -jar backend/target/hospital-management-system-1.0.0.jar"
+    "startCommand": "java -jar backend/target/hospital-management-system-1.0.0.jar"
   }
 }
